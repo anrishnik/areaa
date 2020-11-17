@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of ​​a circle</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            Площадь круга
+        </h1>
+    </header>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li>
+                <a class="nav__link" href="">Главная</a>
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <h2 class="main__formula">S = π * r^2</h2>
+        <p class="main__text-input">Введите радиус (r): <input class="radius"> метров</p>
+        <button class="as">Вычислить</button>
+        <p class="main__answer">
+            Площадь круга равна: <span class="answer"></span>
+        </p>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">
+            2020 год, Баскаков Анри, 3-19
+        </p>
+        <a class="footer__mail" href="mailto:E-mail-Al_TXTI@uMail.uz">
+            E-mail-Al_TXTI@uMail.uz
+        </a>
+    </footer>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .header {
+            text-align: center;
+            background: #9ccaff;
+        }
+
+        .header__title {
+            padding: 70px 0;
+            font-size: 60px;
+            color: #220ba8;
+        }
+
+        .nav__list {
+            margin: 20px 0 20px 10px;
+        }
+
+        .nav__link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgb(99, 93, 122);
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .nav__link:hover {
+            background: rgb(55, 46, 90);
+            transition: 0.3s background;
+        }
+
+        .main {
+            border: #220ba8 2px solid;
+            padding: 30px 0 30px 10px;
+        }
+
+        .main__formula {
+            font-size: 30px;
+            margin-bottom: 30px;
+
+        }
+
+        .main__text-input {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main__text-input input {
+            font-size: 20px;
+        }
+
+        .as {
+            font-size: 20px;
+        }
+
+        .main__answer {
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        .radius {
+            width: 70px;
+        }
+
+        .footer {
+            height: 99px;
+            background: #220ba8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer__text {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .footer__mail {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+
+
+    <script>
+        let p = 3.14,
+            radius = document.querySelector('input'),
+            btn = document.querySelector('.as'),
+            answer = document.querySelector('.answer');
+        btn.addEventListener('click', function () {
+            answer.innerHTML = radius.value * radius.value * 3.14 + ' м²'
+        })
+    </script>
+</body>
+
+</html>
